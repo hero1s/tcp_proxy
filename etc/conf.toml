@@ -1,0 +1,26 @@
+#监听端口
+bind = "0.0.0.0:9999"
+#等待队列大小
+wait_queue_len = 100
+#最大连接数
+max_conn = 50
+#超时断开连接
+timeout = 5
+#失效次数移除服务
+failover = 3
+#后台状态查看端口(/stats)
+stats = "0.0.0.0:19999"
+#后端转发服务列表
+backend = ["192.168.3.221:7777","192.168.3.221:6777"]
+#是否websocket代理
+websocket = true
+#websocket ssl证书
+tlscert = ""
+tlskey = ""
+#日志
+[log]
+    level = "info"
+    path  = "log/proxy.log"
+
+
+
